@@ -49,7 +49,7 @@
     </main>
     <section>
      <ul id="partners">
-     <li class="partner">
+     <!--<li class="partner">
              <img src="image/partner/partner-bustour.png" alt="Partner Bus Tour">
          </li>
 
@@ -63,7 +63,7 @@
 
         <li class="partner">
             <img src="image/partner/partner-collegetours.png" alt="collegetours">
-        </li> 
+        </li> -->
 
     </ul>
 
@@ -120,6 +120,49 @@
         currentTime();
 
         timerEvent(currentTime, milliseconds)
+
+
+    
+         var socialIcon = ["partner-bustour.png","partner-cabinrental.png","partner-campingadv.png","partner-collegetour.png"];//empty array
+         var imageList = [];
+         var image;
+         var openList = "<li id='socialIcon'>";
+         var closeList = "</li>"
+
+     
+        
+
+         for (var i=0; i<4; i++){
+             socialIcon[i];
+             var openImage = "<img src=image/partner/" + socialIcon[i];
+
+            image = openList + openImage +  closeList;
+
+            imageList.push(image);
+
+            document.getElementById("partner").innerHTML= imageList;
+         }
+
+        
+      
+         //var photos = [];//empty array
+         //var fileNames = []; //empty array
+         //var imageList = [];
+         //var image;
+         //var openList = "<li id='photo'>";
+         //var closeList = "</li>"
+
+
+         //var title;
+         //var photoname = ["photoname1", "photoname2", "photoname3",
+         //"photoname4","photoname5", "photoname6"];
+         //var titleOpenList="<p id='title'>";
+         //var titleCloseList="</p>"
+
+         //var openList1 = "<li id='photo"
+         //var openList2 = "'>"; //Declare a variable to contain open list tag
+         //var closeList = "</li>"; //Declare a variable to contain an close list tag
+
     </script>
 </body>
 </html>
