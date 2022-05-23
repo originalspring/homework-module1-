@@ -1,14 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-   
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <meta charset="UTF-8">
    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
-     <link rel="stylesheet" href="style.css">
-   
+     <link rel="stylesheet" href="style.css">  
 </head>
 <body id="home">
     <div id="container">
@@ -26,8 +24,21 @@
                 <li> <a href="Contact.html">  Contact</a></li>
              </ul>
         </nav> 
+
     </div>
     </header>
+
+    <section id="timeofday">
+        <span><p fontcolor=#fff> Your current local time:</p></span>
+        <span id="clock"></span> 
+    </section>
+
+
+
+    </section>
+
+
+
     <main>
         <h1>Introducing California's Greatest Cliffs</h1>
         <p>California cliffs are one of a kind in the United States where no cliffs are as magnificent and beautiful as them. And California is the only state that have cliffs that fronts all possible environments: sea, river, mountains and canyons. There are four such individual unique cliffs: West Cliff, North Cliff, East Cliff and South Cliff. 
@@ -38,7 +49,7 @@
     </main>
     <section>
      <ul id="partners">
-         <li class="partner">
+     <li class="partner">
              <img src="image/partner/partner-bustour.png" alt="Partner Bus Tour">
          </li>
 
@@ -52,9 +63,10 @@
 
         <li class="partner">
             <img src="image/partner/partner-collegetours.png" alt="collegetours">
-        </li>
+        </li> 
 
     </ul>
+
     </section>
     </div>
 
@@ -71,5 +83,43 @@
         <p>Copyright 2020 :: GreatCliffs.com
         </p>
     </footer>
+
+    <!--javascript codes-->
+    <script>
+        //create a time data function 
+        function currentTime(){
+       //declare variable
+            var d = new Date();
+            var hr = d.getHours();
+            var min = d.getMinutes();
+            var sec =d.getSeconds();
+            var ampm; }
+        
+        if (sec < 10){
+            sec= "0" + sec;
+        }
+
+        if (min < 10){
+            min= "0" + min;
+        }
+
+        if (hr>12){
+            hr-=12;
+            ampm= "PM";
+        } else if(hr==12){
+            ampm="PM";
+        }else{
+            ampm = "AM";
+        }
+
+        var time = hr + ":" + min + ":" + sec + " "+ ampm;
+        document.getElementById("clock").innerText = time;
+
+        setInterval(currentTime, 1000);
+
+        currentTime();
+
+        timerEvent(currentTime, milliseconds)
+    </script>
 </body>
 </html>
