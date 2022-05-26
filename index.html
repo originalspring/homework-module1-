@@ -48,7 +48,7 @@
         The closest cliff to Irvine is West Cliff, which is the most popular and most visited.</p>
     </main>
     <section>
-     <ul id="partners">
+     <ul id="partner">
      <!--<li class="partner">
              <img src="image/partner/partner-bustour.png" alt="Partner Bus Tour">
          </li>
@@ -70,6 +70,8 @@
     </section>
     </div>
 
+   
+
     <footer>
         <div id="nondisclaimer"></div>
             <div class="copy"></div>
@@ -85,67 +87,40 @@
     </footer>
 
     <!--javascript codes-->
-    <script>
-        //create a time data function 
-        function currentTime(){
-       //declare variable
-            var d = new Date();
-            var hr = d.getHours();
-            var min = d.getMinutes();
-            var sec =d.getSeconds();
-            var ampm; }
+    <!--digital Clock-->
+    <script src="js/digclock.js"></script>
+
+     <!--partners-->
+     <script src="js/site_scripts.js"></script>
+
+     <script> var socialIcon = ["partner-bustour.png","partner-cabinrental.png","partner-campingadv.png","partner-collegetour.png"];//empty array
+        var imageList = [];
+        var image;
+        var openList = "<li id='socialIcon'>";
+        var closeList = "</li>"
+   
+   
         
-        if (sec < 10){
-            sec= "0" + sec;
+        
+        
+        
+        for (var i=0; i<4; i++){
+            //socialIcon[i];
+            var openImage = "<image src='image/partner/'" + socialIcon[i] + '>';
+        
+           image = openList + openImage +  closeList;
+        
+           imageList.push(image);
+        
+           document.getElementById("partner").innerHTML= imageList;
         }
-
-        if (min < 10){
-            min= "0" + min;
-        }
-
-        if (hr>12){
-            hr-=12;
-            ampm= "PM";
-        } else if(hr==12){
-            ampm="PM";
-        }else{
-            ampm = "AM";
-        }
-
-        var time = hr + ":" + min + ":" + sec + " "+ ampm;
-        document.getElementById("clock").innerText = time;
-
-        setInterval(currentTime, 1000);
-
-        currentTime();
-
-        timerEvent(currentTime, milliseconds)
-
-
+   
+       
+          </script>
     
-         var socialIcon = ["partner-bustour.png","partner-cabinrental.png","partner-campingadv.png","partner-collegetour.png"];//empty array
-         var imageList = [];
-         var image;
-         var openList = "<li id='socialIcon'>";
-         var closeList = "</li>"
-
-     
-        
-
-         for (var i=0; i<4; i++){
-             socialIcon[i];
-             var openImage = "<img src=image/partner/" + socialIcon[i];
-
-            image = openList + openImage +  closeList;
-
-            imageList.push(image);
-
-            document.getElementById("partner").innerHTML= imageList;
-         }
-
         
       
-         //var photos = [];//empty array
+         <!--//var photos = [];//empty array
          //var fileNames = []; //empty array
          //var imageList = [];
          //var image;
@@ -162,7 +137,15 @@
          //var openList1 = "<li id='photo"
          //var openList2 = "'>"; //Declare a variable to contain open list tag
          //var closeList = "</li>"; //Declare a variable to contain an close list tag
+         -->
 
-    </script>
+
+
+
+
+
+
+
+
 </body>
 </html>
