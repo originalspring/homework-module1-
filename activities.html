@@ -8,7 +8,10 @@
     <meta charset="UTF-8">
    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
      <link rel="stylesheet" href="style.css">
-   
+
+
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+     <script src="js/site_scripts.js"></script>
 </head>
 <body id="activities">
     <div id="container">
@@ -53,27 +56,45 @@
          <tbody>
              <tr>
                <td>hiking</td>
-               <td>  College Hikes  </td>
-               <td>Family Fun  </td>
+               <td id="tbclick">  College Hikes  </td>
+               <td id="tbclick">Family Fun  </td>
              </tr>
 
              <tr>
                <td> Kayak</td>
-               <td>  Western Kayak Meetup</td>
+               <td id="tbclick">  Western Kayak Meetup</td>
                <td>Not Available</td>
              </tr>
 
              <tr>
                <td> Skydiving</td>
-               <td> Seacliff Diving </td>
-               <td>Sky is the limit</td>
+               <td id="tbclick"> Seacliff Diving </td>
+               <td id="tbclick">Sky is the limit</td>
              </tr>
 
 
          </tbody>
     </table>
 </div>
+                <!-- <script>
 
+                $(document).ready(function() {
+                    $('.tbclick').addClass("hover","green");
+                })
+
+                </script> -->
+
+                <script>
+
+                $(document).ready(function() {
+                    $("td").click(function() {
+
+                        $(".tbclick").addClass("clickcolorchange");
+                    
+                    });
+                });
+             
+                </script>
     
 
 
@@ -81,7 +102,7 @@
 <div>
     <section>
 
-        <script src="js/site_scripts.js"></script>
+       
      <!-- <ul id="partners">
          <li class="partner">
              <img src="image/partner/partner-bustour.png" alt="Partner Bus Tour">
@@ -112,7 +133,7 @@
                 <a href="#" class="fa fa-instagram"></a>
             </div> -->
 
-            <script src="js/site_scripts.js"></script>
+            <script src="js/activity.js"></script>
         
                 
 
